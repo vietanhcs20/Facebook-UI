@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Facebook-UI/static/css/main.937648bd.css",
+    "main.js": "/Facebook-UI/static/js/main.f8669746.js",
+    "static/media/post-girl19.jpg": "/Facebook-UI/static/media/post-girl19.0297ac27bf9b2fe1157f.jpg",
+    "static/media/topcomment-post.jpg": "/Facebook-UI/static/media/topcomment-post.24297eaae30ed3c308fd.jpg",
+    "static/media/datatech.jfif": "/Facebook-UI/static/media/datatech.9df80e4e16ac7ba8370f.jfif",
+    "static/media/support.jpg": "/Facebook-UI/static/media/support.9b7e8b5ff8bede05b967.jpg",
+    "static/media/avtstory.jpg": "/Facebook-UI/static/media/avtstory.685f5de13a94a33cb8c1.jpg",
+    "static/media/like-reaction.svg": "/Facebook-UI/static/media/like-reaction.75f9bea19bc19b9c135680982ab818e9.svg",
+    "static/media/heart-reaction.svg": "/Facebook-UI/static/media/heart-reaction.09fee837a394d29fd899a12e02e0af85.svg",
+    "index.html": "/Facebook-UI/index.html",
+    "main.937648bd.css.map": "/Facebook-UI/static/css/main.937648bd.css.map",
+    "main.f8669746.js.map": "/Facebook-UI/static/js/main.f8669746.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.937648bd.css",
+    "static/js/main.f8669746.js"
+  ]
+}
