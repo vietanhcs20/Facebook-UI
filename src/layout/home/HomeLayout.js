@@ -5,13 +5,9 @@ import './homelayout.scss'
 
 const HomeLayout = () => {
     return (
-        <div className='home' style={{
-            backgroundColor: '#18191A',
-            width: '100vw',
-            height: '100vh'
-        }}>
+        <div className='home'>
             <Navbar />
-            <div className='container' >
+            <div className='container-content' >
                 <SidebarLeft />
                 <Content />
                 <SidebarRight />

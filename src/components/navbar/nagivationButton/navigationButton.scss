@@ -4,6 +4,10 @@
   cursor: pointer;
   padding: 8px 0;
 
+  &.menu-button {
+    display: none;
+  }
+
   .navigation-button-bg {
     padding: 8px 0;
     width: 100%;
@@ -49,5 +53,30 @@
         color: rgba(255, 255, 255, 0.9);
       }
     }
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .navigation-button {
+    max-width: calc(15vw - 55px);
+    min-width: 50px;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  .navigation-button {
+    &.game-button {
+      display: none;
+    }
+
+    &.menu-button {
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
   }
 }

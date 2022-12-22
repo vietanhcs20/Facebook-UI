@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './sidebarLeft.scss'
 import SidebarLeftLink, { linkList, groupList, toggleBtn } from './sidebarLeftLink/SidebarLeftLink';
 
-const SidebarLeft = () => {
+const SidebarLeft = ({ openMenu }) => {
     const [toggle1, setToggle1] = useState(false)
     const [toggle2, setToggle2] = useState(false)
 

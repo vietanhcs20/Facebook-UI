@@ -1,0 +1,26 @@
+.bookmark {
+  width: 100vw;
+  height: 100vh;
+  background-color: #18191a;
+  display: flex;
+  flex-direction: column;
+
+  .content-container {
+    width: 100%;
+    height: calc(100vh - 56px);
+
+    .sidebar-left {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  .bookmark {
+    .sidebar-left {
+      display: block;
+    }
+  }
+}

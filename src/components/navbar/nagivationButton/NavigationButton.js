@@ -4,39 +4,57 @@ import { MdOndemandVideo } from 'react-icons/md'
 import { SiHomeassistantcommunitystore } from 'react-icons/si'
 import { BsPersonCircle } from 'react-icons/bs'
 import { IoGameControllerOutline } from 'react-icons/io5'
+import { HiMenu } from 'react-icons/hi'
 import './navigationButton.scss'
-
+import { Link } from 'react-router-dom';
 
 export const buttons = [
     {
         id: 1,
-        icon: <AiFillHome />
+        icon: <AiFillHome />,
+        route: '/'
     },
     {
         id: 2,
-        icon: <MdOndemandVideo />
+        icon: <MdOndemandVideo />,
+        route: '/watch'
     },
     {
         id: 3,
-        icon: <SiHomeassistantcommunitystore />
+        icon: <SiHomeassistantcommunitystore />,
+        route: '/marketplace'
     },
     {
         id: 4,
-        icon: <BsPersonCircle />
+        icon: <BsPersonCircle />,
+        route: '/group'
     },
     {
         id: 5,
-        icon: <IoGameControllerOutline />
+        icon: <IoGameControllerOutline />,
+        route: 'gaming'
+    },
+    {
+        id: 6,
+        icon: <HiMenu />,
+        route: '/bookmark'
     }
+
 ]
 
-const NavigationButton = ({ icon, activeItem, activeId, onClick }) => {
+const NavigationButton = ({ icon, activeItem, activeId, onClick, route }) => {
+    const getClass = () => {
+        if (activeId === 5) return 'game-button'
+        if (activeId === 6) return 'menu-button'
+        return 'hide-on-mobile'
+    }
+    let classBtn = getClass()
     return (
-        <a href='#1' className='navigation-button' onClick={onClick}>
+        <Link to={route} className={`navigation-button ${classBtn}`} onClick={onClick}>
             <div className={`navigation-button-bg ${activeItem === activeId ? 'active' : ''}`}>
                 <span>{icon}</span>
             </div>
-        </a>
+        </Link>
     );
 };
 

@@ -53,22 +53,25 @@ Mbappe sẵn sàng giảm lương để tìm kiếm đội bóng mới vì cầu
 const Content = () => {
     return (
         <div className='home-content'>
-            <Story />
+            <div className="content-container">
+                <Story />
 
-            <Status avatar={image.avatar} />
+                <Status avatar={image.avatar} />
 
-            {postsList.map(item => (
-                <Post
-                    avatar={item.avatar}
-                    name={item.nameUser}
-                    time={item.time}
-                    caption={item.caption}
-                    images={item.images}
-                    quantity={item.quantity}
-                    comments={item.comments}
-                    shares={item.shares}
-                />
-            ))}
+                {postsList.map(item => (
+                    <Post
+                        key={item.id}
+                        avatar={item.avatar}
+                        name={item.nameUser}
+                        time={item.time}
+                        caption={item.caption}
+                        images={item.images}
+                        quantity={item.quantity}
+                        comments={item.comments}
+                        shares={item.shares}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

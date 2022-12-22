@@ -15,14 +15,14 @@ const SidebarRight = () => {
                         <img src={image.datatech} alt="" />
                         <div className="info">
                             <span>DATATECH BEE-GINNER 2022 - NURTURING YOUR DATATECH CURIOSITY</span>
-                            <a href="#">accounts.google.com</a>
+                            <a href="#1">accounts.google.com</a>
                         </div>
                     </li>
                     <li>
                         <img src={image.support} alt="" />
                         <div className="info">
                             <span>Hỗ trợ học tập</span>
-                            <a href="#">beacons.ai</a>
+                            <a href="#1">beacons.ai</a>
                         </div>
                     </li>
                 </ul>

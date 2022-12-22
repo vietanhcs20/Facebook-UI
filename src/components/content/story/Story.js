@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './story.scss'
 import { FaBookOpen } from 'react-icons/fa'
 import { BsFillCameraVideoFill } from 'react-icons/bs'
@@ -47,6 +47,17 @@ const storyList = [
     }
 ]
 const Story = () => {
+    const [windowWidth, setWindowWidth] = useState(1536)
+    useEffect(() => {
+        const resizeEvent = () => {
+            setWindowWidth(window.innerWidth)
+        }
+        window.addEventListener('resize', resizeEvent)
+        return () => {
+            window.removeEventListener('resize', resizeEvent)
+        }
+    }, [windowWidth])
+
     return (
         <div className="story">
             <ul className='category'>
@@ -75,7 +86,7 @@ const Story = () => {
                     </span>
                 </li>
             </ul>
-            <Swiper spaceBetween={8} slidesPerView={4.7} navigation className="swiper-container">
+            <Swiper spaceBetween={8} slidesPerView={windowWidth >= 1536 ? 4.7 : 4} navigation className="swiper-container">
                 <SwiperSlide className='create-story swiper-item'>
                     <div className="avatar">
                         <img src={image.avtstory} alt='img' />

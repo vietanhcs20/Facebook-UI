@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BiDotsHorizontalRounded, BiComment } from 'react-icons/bi'
 import { MdOutlinePublic, MdClose } from 'react-icons/md'
 import { AiOutlineLike } from 'react-icons/ai'
@@ -7,7 +7,9 @@ import image from '../../assets/img'
 import './post.scss'
 
 const Post = ({ avatar, name, time, caption, images, quantity, comments, shares }) => {
-    console.log(caption);
+
+    const [activeLike, setActiveLike] = useState(false)
+
     return (
         <div className="post">
             <div className="header">
@@ -44,7 +46,7 @@ const Post = ({ avatar, name, time, caption, images, quantity, comments, shares 
                     {caption}
                 </p>
                 <div className="content-image">
-                    {images && images.map(item => <a key={item.id} href="#1" ><img src={item} alt="img" /></a>)}
+                    {images && images.map((item, index) => <a href="#1" key={index}><img src={item} alt="img" /></a>)}
                 </div>
             </div>
             <div className="interactions-quantity">
@@ -63,7 +65,7 @@ const Post = ({ avatar, name, time, caption, images, quantity, comments, shares 
                 {shares && <span className="shares">{`${shares} lượt chia sẻ`} </span>}
             </div>
             <div className="interactions-button">
-                <div className="like-button interaction-button">
+                <div className={`like-button interaction-button ${activeLike ? 'active' : ''}`} onClick={() => setActiveLike(!activeLike)}>
                     <span className="icon"><AiOutlineLike /></span>
                     <span className="title">Thích</span>
                 </div>
