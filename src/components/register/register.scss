@@ -1,0 +1,154 @@
+@import "../../css/component";
+@import "../../css/variable";
+
+.register {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+
+  .container {
+    background-color: #fff;
+    width: 432px;
+    border-radius: 8px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1), -4px 0 10px rgba(0, 0, 0, 0.1),
+      0 6px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    .header {
+      width: 100%;
+      padding: 16px;
+      border-bottom: 1px solid lightgrey;
+      .title {
+        font-size: 3.2rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: gray;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 17px 16px;
+
+      .info {
+        display: grid;
+        grid-template-areas:
+          "firstName lastName"
+          "email email"
+          "password password";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+
+        input {
+          height: 40px;
+          border-radius: 4px;
+          border: 1px solid lightgrey;
+          outline: none;
+          background-color: #f5f6f7;
+          padding: 8px;
+        }
+
+        .first-name {
+          grid-area: firstName;
+        }
+
+        .last-name {
+          grid-area: lastName;
+        }
+
+        .email {
+          grid-area: email;
+        }
+
+        .password {
+          grid-area: password;
+        }
+      }
+
+      h3 {
+        margin-top: 16px;
+        color: #606770;
+        font-size: 1.4rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        svg {
+          width: 16px;
+          height: 16px;
+          margin-left: 6px;
+        }
+      }
+
+      .birth {
+        .option-field {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 12px;
+          height: 38px;
+
+          select {
+            border-radius: 4px;
+            padding: 0 4px;
+            display: flex;
+            align-items: center;
+            border: 1px solid lightgrey;
+          }
+        }
+      }
+
+      .gender {
+        .radio {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 10px;
+
+          & > div {
+            height: 38px;
+            padding: 0 4px;
+            border: 1px solid lightgrey;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 4px;
+            padding: 0 10px;
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      .register-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 190px;
+        height: 36px;
+        background-color: $register-btn-color;
+        margin: 40px auto 10px;
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2.4rem;
+      cursor: pointer;
+      padding: 5px;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

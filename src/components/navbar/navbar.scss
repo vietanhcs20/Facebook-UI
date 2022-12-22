@@ -1,0 +1,130 @@
+.navbar {
+  background-color: #242526;
+  height: 56px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 16px;
+  position: relative;
+
+  .left {
+    padding: 8px 0;
+    height: 100%;
+    width: 320px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      background-color: #3a3b3c;
+      height: 100%;
+      padding: 8px 16px;
+      border-radius: 24px;
+      margin-left: 12px;
+
+      span {
+        color: gray;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+      }
+
+      input {
+        display: inline-block;
+        max-width: 240px;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        margin-left: 8px;
+        caret-color: #fff;
+
+        &::placeholder {
+          color: gray;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .between {
+    height: 100%;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    place-items: center;
+    padding: 0 105px;
+    gap: 12px;
+  }
+
+  .right {
+    max-width: 320px;
+    flex-basis: 320px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 40px);
+      grid-template-rows: 40px;
+      gap: 8px;
+
+      .temp {
+        background-color: #4e4f50;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+
+        // &.account:hover::after {
+        //   content: "";
+        //   width: 40px;
+        //   height: 40px;
+        //   position: absolute;
+        //   background-color: rgba(255, 255, 255, 0.1);
+        //   top: 0;
+        //   left: 0;
+        //   right: 0;
+        // }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+          font-size: 2rem;
+        }
+
+        ul {
+          width: 100px;
+          height: 20px;
+          position: absolute;
+          right: 16px;
+          top: 100%;
+          background-color: red;
+          display: none;
+          color: red;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

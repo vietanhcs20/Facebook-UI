@@ -1,0 +1,6 @@
+export { default as Login } from './login/Login'
+export { default as Navbar } from './navbar/Navbar'
+export { default as Register } from './register/Register'
+export { default as SidebarLeft } from './sidebarLeft/SidebarLeft'
+export { default as SidebarRight } from './sidebarRight/SidebarRight'
+export { default as Content } from './content/Content'

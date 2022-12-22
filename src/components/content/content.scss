@@ -1,0 +1,9 @@
+.home-content {
+  flex-grow: 1;
+  padding: 16px 465px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: calc(100vh - 56px);
+}
