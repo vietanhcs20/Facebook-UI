@@ -32,7 +32,7 @@ export const buttons = [
     {
         id: 5,
         icon: <IoGameControllerOutline />,
-        route: ''
+        route: '/'
     },
     {
         id: 6,
