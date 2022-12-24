@@ -92,3 +92,29 @@
     }
   }
 }
+
+@media screen and (max-width: 1099px) {
+  .login {
+    width: 100vw;
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+
+      .message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 396px;
+        margin-top: 0;
+        text-align: center;
+        .content {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}

@@ -17,22 +17,22 @@ export const buttons = [
     {
         id: 2,
         icon: <MdOndemandVideo />,
-        route: '/watch'
+        route: '/'
     },
     {
         id: 3,
         icon: <SiHomeassistantcommunitystore />,
-        route: '/marketplace'
+        route: '/'
     },
     {
         id: 4,
         icon: <BsPersonCircle />,
-        route: '/group'
+        route: '/'
     },
     {
         id: 5,
         icon: <IoGameControllerOutline />,
-        route: 'gaming'
+        route: ''
     },
     {
         id: 6,
