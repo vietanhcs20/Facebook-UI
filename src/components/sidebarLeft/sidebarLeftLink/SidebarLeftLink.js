@@ -2,119 +2,141 @@ import React from 'react';
 import './sidebarLeftLink.scss'
 import image from '../../../assets/img'
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
-
+import { Link } from 'react-router-dom';
 
 export const linkList = [
     {
         id: 1,
         img: image.avatar,
-        title: 'Nguyễn Việt Anh'
+        title: 'Nguyễn Việt Anh',
+        route: '/vietanhht20'
     },
     {
         id: 2,
         img: image.friends,
-        title: 'Bạn bè'
+        title: 'Bạn bè',
+        route: 'friends'
     },
     {
         id: 3,
         img: image.save,
-        title: 'Đã lưu'
+        title: 'Đã lưu',
+        route: 'saved'
     },
     {
         id: 4,
         img: image.recently,
-        title: 'Gần đây nhất'
+        title: 'Gần đây nhất',
+        route: 'recently'
     },
     {
         id: 5,
         img: image.group,
-        title: 'Nhóm'
+        title: 'Nhóm',
+        route: 'groups'
     },
     {
         id: 6,
         img: image.marketplace,
-        title: 'Marketplace'
+        title: 'Marketplace',
+        route: 'marketplace'
     },
     {
         id: 7,
         img: image.fundraising,
-        title: 'Chiến dịch gây quỹ'
+        title: 'Chiến dịch gây quỹ',
+        route: 'fundraisers'
     },
     {
         id: 8,
         img: image.game,
-        title: 'Chơi game'
+        title: 'Chơi game',
+        route: 'gaming'
     },
     {
         id: 9,
         img: image.order,
-        title: 'Đơn đặt hàng và thanh toán'
+        title: 'Đơn đặt hàng và thanh toán',
+        route: 'order'
     },
     {
         id: 10,
         img: image.blood,
-        title: 'Hiến máu'
+        title: 'Hiến máu',
+        route: 'blooddonations'
     },
     {
         id: 11,
         img: image.advertisement,
-        title: 'Hoạt động quảng cáo gần đây'
+        title: 'Hoạt động quảng cáo gần đây',
+        route: 'ads'
     },
     {
         id: 12,
         img: image.memories,
-        title: 'Kỷ niệm'
+        title: 'Kỷ niệm',
+        route: 'memories'
     },
     {
         id: 13,
         img: image.friends,
-        title: 'Messenger'
+        title: 'Messenger',
+        route: 'messages'
     },
     {
         id: 14,
         img: image.event,
-        title: 'Sự kiện'
+        title: 'Sự kiện',
+        route: 'events'
     },
     {
         id: 15,
         img: image.healthy,
-        title: 'Sức khỏe cảm xúc'
+        title: 'Sức khỏe cảm xúc',
+        route: 'emotional_health'
     },
     {
         id: 16,
         img: image.page,
-        title: 'Trang'
+        title: 'Trang',
+        route: 'pages'
     },
     {
         id: 17,
         img: image.managment,
-        title: 'Trình quản lý quảng cáo'
+        title: 'Trình quản lý quảng cáo',
+        route: 'adsmanager'
     },
     {
         id: 18,
         img: image.climate,
-        title: 'Trung tâm khoa học khí hậu'
+        title: 'Trung tâm khoa học khí hậu',
+        route: 'climatescienceinfo'
     },
     {
         id: 19,
         img: image.videogame,
-        title: 'Video chơi game'
+        title: 'Video chơi game',
+        route: 'videogame'
     },
     {
         id: 20,
         img: image.live,
-        title: 'Video trực tiếp'
+        title: 'Video trực tiếp',
+        route: 'watchlive'
     },
     {
         id: 21,
         img: image.friends,
-        title: 'Watch'
+        title: 'Watch',
+        route: 'watch'
     },
 
     {
         id: 22,
         img: image.star,
-        title: 'Yêu thích'
+        title: 'Yêu thích',
+        route: 'favorites'
     },
 
 
@@ -183,10 +205,10 @@ export const toggleBtn = [
     }
 ]
 
-const SidebarLeftLink = ({ img, title, icon, onClick }) => {
+const SidebarLeftLink = ({ img, title, icon, onClick, route }) => {
     return (
         <li className='sidebar-item' onClick={onClick}>
-            <a href="#1">
+            <Link to='/'>
                 {img ? <img src={img} alt='img' className='img' /> : undefined}
                 {icon ? (
                     <div className="icon img">
@@ -194,7 +216,7 @@ const SidebarLeftLink = ({ img, title, icon, onClick }) => {
                     </div>
                 ) : undefined}
                 <span>{title}</span>
-            </a>
+            </Link>
         </li>
     );
 };

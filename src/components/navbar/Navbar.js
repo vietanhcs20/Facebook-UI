@@ -8,17 +8,16 @@ import { IoMdNotifications } from 'react-icons/io'
 import { RiMessengerFill } from 'react-icons/ri'
 import NavbarMenu from './navabarMenuList/NavbarMenu';
 import { AppContext } from '../../Context/ContextProvider';
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-
     const { active, setActive } = useContext(AppContext)
     return (
         <div className='navbar'>
             <div className="left">
-                <a href="#1">
+                <Link to='/' onClick={() => setActive(1)}>
                     <img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-white-f.png" alt="logo" />
-                </a>
+                </Link>
                 <div className="search">
                     <span>
                         <TfiSearch />

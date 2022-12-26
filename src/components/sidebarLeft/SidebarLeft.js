@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './sidebarLeft.scss'
 import SidebarLeftLink, { linkList, groupList, toggleBtn } from './sidebarLeftLink/SidebarLeftLink';
 
+
 const SidebarLeft = ({ openMenu }) => {
     const [toggle1, setToggle1] = useState(false)
     const [toggle2, setToggle2] = useState(false)
@@ -15,7 +16,7 @@ const SidebarLeft = ({ openMenu }) => {
                         if (!toggle1) {
                             len = 6
                         }
-                        return item.id <= len ? <SidebarLeftLink key={item.id} img={item.img} title={item.title} /> : undefined
+                        return item.id <= len ? <SidebarLeftLink route={item.route} key={item.id} img={item.img} title={item.title} /> : undefined
 
                     })}
                     {toggleBtn.map(item => {
