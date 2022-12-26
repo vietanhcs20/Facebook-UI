@@ -52,6 +52,14 @@
       width: 100%;
       flex-basis: unset;
 
+      .story {
+        .category {
+          li {
+            height: 40px;
+          }
+        }
+      }
+
       .status {
         .option {
           .title {

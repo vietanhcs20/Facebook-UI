@@ -48,6 +48,12 @@ const storyList = [
 ]
 const Story = () => {
     const [windowWidth, setWindowWidth] = useState(1536)
+    const calcPerView = () => {
+        if (windowWidth >= 1546) return 4.7
+        if (windowWidth <= 500) return 3.4
+        return 4
+    }
+    const perView = calcPerView()
     useEffect(() => {
         const resizeEvent = () => {
             setWindowWidth(window.innerWidth)
@@ -86,7 +92,7 @@ const Story = () => {
                     </span>
                 </li>
             </ul>
-            <Swiper spaceBetween={8} slidesPerView={windowWidth >= 1536 ? 4.7 : 4} navigation className="swiper-container">
+            <Swiper spaceBetween={8} slidesPerView={perView} navigation className="swiper-container">
                 <SwiperSlide className='create-story swiper-item'>
                     <div className="avatar">
                         <img src={image.avtstory} alt='img' />
