@@ -39,6 +39,18 @@ import linhchiAvatar from './linhchi-avatar.jpg'
 import ptitcfs from './ptitcfs.png'
 import topcommentAvatar from './topcomment-avatar.jpg'
 import topcommentPost from './topcomment-post.jpg'
+import nguyenmanhavt from './nguyenmanhavt.jpg'
+import nguyenmanhstr from './nguyenmanhstr.jpg'
+import beautifulavt from './beautifulavt.jpg'
+import beautifulstr from './beautifulstr.jpg'
+import hoangyenavt from './hoangyenavt.jpg'
+import hoangyenstr from './hoangyenstr.jpg'
+import mitranavt from './mitranavt.jpg'
+import mitranstr from './mitranstr.jpg'
+import vuyenavt from './vuyenavt.jpg'
+import vuyenstr from './vuyenstr.jpg'
+import thuytrangavt from './thuytrangavt.jpg'
+import thuytrangstr from './thuytrangstr.jpg'
 const image = {
     avatar,
     advertisement,
@@ -80,7 +92,19 @@ const image = {
     linhchiAvatar,
     ptitcfs,
     topcommentAvatar,
-    topcommentPost
+    topcommentPost,
+    nguyenmanhavt,
+    nguyenmanhstr,
+    beautifulavt,
+    beautifulstr,
+    hoangyenavt,
+    hoangyenstr,
+    mitranavt,
+    mitranstr,
+    vuyenavt,
+    vuyenstr,
+    thuytrangavt,
+    thuytrangstr
 }
 
 export default image
